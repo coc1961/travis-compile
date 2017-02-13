@@ -1,0 +1,20 @@
+sudo: required
+
+language: bash
+
+services:
+ - docker
+ 
+branches:
+  only: 
+    - master
+
+install: 
+    - docker build -t donkey1961/travis-compile .
+
+script:
+    - docker run --rm   -e JAVA_VERSION=1.7 -e MAVEN_VERSION=3.3.9  -v $PWD/src:/data/src  -v $HOME/.m2:/root/.m2   donkey1961/travis-compile --version
+
+after_success:
+    - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"  
+    - docker push donkey1961/travis-compile
