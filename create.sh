@@ -1,2 +1,2 @@
 #!/bin/sh
-docker build  --no-cache  -t donkey1961/travis  .
+docker build  --no-cache  -t donkey1961/travis-compile  .

@@ -1,1 +1,1 @@
-docker run  -e TRAVIS_BRANCH=master  -v /home/carlos/Desarrollo/mydockerbuild/docker-library:/root/build   --rm donkey1961/travis  $*  
+docker run  -e TRAVIS_BRANCH=master  -v /home/carlos/Desarrollo/mydockerbuild/docker-library:/root/build   --rm donkey1961/travis-compile  $*  

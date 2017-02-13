@@ -1,4 +1,4 @@
-FROM travis-build
+FROM donkey1961/travis-build
 
 MAINTAINER Carlos Castro
 
